@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(27, 32, 34);
+  color: white;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-heading {
+  width: 60%;
+  display: flex;
+  padding-left: 10%;
+}
+
+.nav-style {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-style:hover {
+  color: rgb(26, 239, 247);
+  text-decoration: none;
+  bottom: 2px;
+}
