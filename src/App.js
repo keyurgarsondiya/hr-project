@@ -4,8 +4,12 @@ import Nav from './components/Nav';
 import HomePage from './screens/HomePage';
 import HelpPage from './screens/HelpPage';
 import LoginPage from './screens/LoginPage';
+import StudentDetails from './screens/StudentDetails';
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Provider } from 'react-redux';
+import store from './store';
 
 class App extends Component {
   constructor(props) {
@@ -14,16 +18,19 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className='App'>
-          <Nav />
-          <Switch>
-            <Route path='/' exact component={HomePage} />
-            <Route path='/help' component={HelpPage} />
-            <Route path='/login' component={LoginPage} />
-          </Switch>
-        </div>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <div className='App'>
+            <Nav />
+            <Switch>
+              <Route path='/' exact component={HomePage} />
+              <Route path='/help' component={HelpPage} />
+              <Route path='/login' component={LoginPage} />
+              <Route path='/student-details' component={StudentDetails} />
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
     );
   }
 }

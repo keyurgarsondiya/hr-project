@@ -5,7 +5,7 @@ import '../App.css';
 
 class HelpPage extends Component {
   render() {
-    return <h1>This is the Help Page</h1>;
+    return <h1>This is the HR Help Page</h1>;
   }
 }
 

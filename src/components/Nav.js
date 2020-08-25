@@ -7,10 +7,10 @@ class Nav extends Component {
   render() {
     return (
       <nav>
-        <Link className='nav-style nav-heading' to='/'>
+        <Link className='nav-style nav-heading float-left' to='/'>
           <h1>HR Hiring</h1>
         </Link>
-        <ul className='nav-links'>
+        <ul className='nav-links float-right'>
           <Link className='nav-style' to='/'>
             <li>Home</li>
           </Link>
@@ -19,6 +19,9 @@ class Nav extends Component {
           </Link>
           <Link className='nav-style' to='/login'>
             <li>Login</li>
+          </Link>
+          <Link className='nav-style' to='/student-details'>
+            <li>Student Details</li>
           </Link>
         </ul>
       </nav>
