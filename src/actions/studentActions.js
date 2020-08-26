@@ -6,10 +6,11 @@ export const getStudents = () => {
   };
 };
 
-export const editStudent = (id, student) => {
-  console.log('Id: ' + id + ' Student: ' + student);
+export const editStudent = (student) => {
+  // console.log('Id: ' + id + ' Student: ' + student);
+  console.log('Student: ', student);
   return {
     type: EDIT_STUDENT,
-    payload: { id, student },
+    payload: student,
   };
 };

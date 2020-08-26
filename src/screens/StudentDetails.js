@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Stepper from '../components/Stepper';
 import { Button } from 'reactstrap';
 import { v4 as uuid } from 'uuid';
+import StudentModal from '../components/StudentModal';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,11 +22,9 @@ class StudentDetails extends Component {
     this.props.getStudents();
   }
 
-  handleAddStudent = () => {
+  handleEditStudent = () => {
     const { students } = this.props.student;
-
     // console.log(students[1].id);
-
     const studentEdit = {
       id: students[1].id,
       name: 'Chagan',
@@ -35,7 +34,6 @@ class StudentDetails extends Component {
     this.setState({ newDetails: studentEdit }, () =>
       console.log('Student Edit: ' + this.state.newDetails)
     );
-
     // this.props.editStudent(students[1].id, studentEdit);
   };
 
@@ -64,9 +62,10 @@ class StudentDetails extends Component {
           ]}
           activeStep={1}
         />
-        <Button color='primary' onClick={() => this.handleAddStudent()}>
-          Add Student
+        <Button color='primary' onClick={() => this.handleEditStudent()}>
+          Edit Student
         </Button>
+        <StudentModal />
       </div>
     );
   }
